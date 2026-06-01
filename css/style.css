@@ -1,0 +1,615 @@
+/* GENERAL STYLE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+  width: 100%;
+  height: 80px;
+  background-color: #0c25e1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+
+.villacarlinalogo {
+  display: flex;
+  align-items: center;
+}
+
+.villacarlinalogo img {
+  width: 130px;   
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover; 
+}
+
+.burger {
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-links a:hover {
+  color: turquoise;
+}
+
+.dropbtn {
+  background: none;
+  color: white;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  font-size: 15px;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 52px;
+  left: 0;
+  background-color: blue;
+  min-width: 160px;
+
+  z-index: 1000;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 12px 16px;
+  color: white;
+  text-decoration: none;;
+}
+
+.dropdown :hover {
+  color: turquoise;
+}
+
+.dropdown-content a:hover {
+  color: turquoise;
+}
+
+/* SLIDESHOW */
+.slideshow-container {
+  width: 100%;
+  display: flex;
+  justify-content: center; 
+}
+
+.mySlides img {
+  width: 100%;
+  max-height: 500px;
+  margin-top: 10px;
+  object-fit: cover;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px 20px 0;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+/*VILLA CARLINA PAGE */
+.VillaCarlinaPage {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  background-color: white;
+
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 40px;
+}
+
+.VillaCarlinaPage-text {
+  flex: 1;
+}
+
+.VillaCarlinaPage-text h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.VillaCarlinaPage-text p {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #0c25e1, #3a6cff);
+  color: white;
+  border-radius: 30px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 8px 20px rgba(12, 37, 225, 0.25);
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  opacity: 0.95;
+  background: #222;
+}
+
+
+.homepagepicResort-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: cover;
+  margin-left: 0;
+}
+
+/* VILLA CARLINA PAGE SEC2 */
+.VillaCarlinaPageSec2 {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  background-color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+
+  padding: 40px;
+}
+
+.VillaCarlinaPageSec2-image {
+  width: 100%;
+  max-width: 500px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.VillaCarlinaPageSec2-text {
+  flex: 1;
+}
+
+.VillaCarlinaPageSec2-text h2 {
+  font-size: 42px;
+}
+
+.VillaCarlinaPageSec2-text p {
+  font-size: 22px;
+  line-height: 1.7;
+}
+
+.VillaCarlinaPageSec2Amenities-image {
+  width: 100%;
+  max-width: 350px;
+  margin-top: 25px;
+  border-radius: 10px;
+}
+
+/* VILLA CARLINA VIDEO */
+.villacarlina-video {
+  width: 100%;
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 0 20px;
+  text-align: center; 
+
+}
+
+.VillaCarlinaPageSec3-video {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.villacarlina-video p{
+  font-size: 22px;
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+/* FOOTER IMAGE */
+.VillaCarlinaPageFooterImg {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.VillaCarlinaPageFooter-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+  max-width: 100%;
+  height: 80px;
+  margin: 0 auto;
+  background-color: #222;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  font-size: 18px;
+}
+
+/* MOBILE RESPONSIVE DESIGN */
+
+@media (min-width: 1025px) {
+/*VILLA CARLINA PAGE SEC 1 1025px*/
+
+  .VillaCarlinaPage {
+    max-width: 1200px;
+  }
+
+  .VillaCarlinaPage-text h1 {
+    font-size: 48px;
+  }
+
+  .VillaCarlinaPage-text p {
+    font-size: 20px;
+  }
+
+  .homepagepicResort-image {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 1024px) {
+/*NAVBAR 1024px*/
+  .navbar {
+    padding: 0 15px;
+  }
+
+  .burger {
+    display: block;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background: #0c25e1;
+    width: 220px;
+    padding: 20px;
+    z-index: 1000;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+/*VILLA CARLINA PAGE SEC 1 1024px*/
+  .VillaCarlinaPage {
+    padding: 35px;
+    gap: 20px;
+  }
+
+  .VillaCarlinaPage-text h1 {
+    font-size: 42px;
+  }
+
+  .VillaCarlinaPage-text p {
+    font-size: 19px;
+  }
+
+  .homepagepicResort-image {
+    max-width: 450px;
+  }
+  
+}
+
+@media (max-width: 820px) {
+/*NAVBAR 820px*/
+  .navbar {
+    height: 85px;
+    padding: 0 15px;
+  }
+
+  .nav-links {
+    gap: 15px;
+    font-size: 16px;
+  }
+
+/*VILLA CARLINA PAGE SEC 1 820px*/
+  .VillaCarlinaPage {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .VillaCarlinaPage-text h1 {
+    font-size: 38px;
+  }
+
+  .VillaCarlinaPage-text p {
+    font-size: 18px;
+  }
+
+  .homepagepicResort-image {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+/*VILLA CARLINA PAGE SEC 2 820px*/
+  .VillaCarlinaPageSec2 {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+    gap: 25px;
+  }
+
+  .VillaCarlinaPageSec2-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .VillaCarlinaPageSec2-text {
+    width: 100%;
+  }
+
+  .VillaCarlinaPageSec2-text p {
+    font-size: 18px;
+  }
+
+  .VillaCarlinaPageSec2Amenities-image {
+    margin: 20px auto 0 auto;
+    max-width: 280px;
+  }
+/*VILLA CARLINA VIDEO 820px*/
+  .villacarlina-video p {
+    font-size: 18px;
+  }
+
+  .VillaCarlinaPageFooter-image {
+    height: 280px;
+  }
+}
+
+
+@media (max-width: 768px) {
+/*NAVBAR 768px*/
+
+    .navbar {
+      height: 100px;
+      flex-direction: row;
+      padding: 20px;
+      position: relative;
+    }
+
+    .burger {
+      display: block;
+      font-size: 28px;
+      background: none;
+      border: none;
+      color: white;
+   }
+
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 80px;
+      right: 0;
+      background: #0c25e1;
+      width: 200px;
+      padding: 20px;
+      z-index: 1000;
+    }
+
+    .nav-links.show{
+      display: flex;
+    }
+
+    .villacarlinalogo img {
+      width: 100px;
+      height: 100px;
+    }
+/*VILLA CARLINA PAGE SEC 1 768px*/
+
+    .VillaCarlinaPage {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .VillaCarlinaPage-text {
+      width: 100%;
+    }
+
+    .VillaCarlinaPage-text h1 {
+      font-size: 36px;
+    }
+
+    .VillaCarlinaPage-text p {
+      font-size: 18px;
+    }
+
+    .homepagepicResort-image {
+      max-width: 100%;
+      margin: 20px 0 0 0;
+  }  
+
+    .VillaCarlinaPage-image {
+      max-width: 100%;
+    }
+
+    footer {
+      padding: 20px;
+      text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+/*NAVBAR 600px*/
+    .navbar {
+      height: 70px;
+    }
+
+    .villacarlinalogo img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .burger {
+      display: block; 
+    }
+
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      right: 0;
+      width: 180px;
+      padding: 15px;
+      background-color: #0c25e1;
+      z-index: 1000;
+    }
+
+/*VILLA CARLINA PAGE SEC 1 600px*/
+    .VillaCarlinaPage {
+      padding: 20px 15px;
+    }
+
+    .VillaCarlinaPage-text {
+      text-align: center;
+    }
+
+    .VillaCarlinaPage-text h1 {
+      font-size: 30px;
+    }
+
+    .VillaCarlinaPage-text p {
+      font-size: 15px;
+    }
+
+    .homepagepicResort-image {
+      width: 100%;
+      margin: 15px 0 0 0;
+    }
+
+    .btn {
+      width: 140px;
+      height: 45px;
+      margin: 20px auto 0 auto;
+      font-size: 14px;
+    }
+
+/*VILLA CARLINA PAGE SEC 2 600px*/
+    .VillaCarlinaPageSec2 {
+      padding: 20px 15px;
+    }
+
+    .VillaCarlinaPageSec2-text p {
+      font-size: 16px;
+    }
+
+    .VillaCarlinaPageSec2Amenities-image {
+      max-width: 220px;
+    }
+
+/*VILLA CARLINA VIDEO*/
+    .villacarlina-video {
+      padding: 0 10px;
+    }
+
+    .villacarlina-video p {
+      font-size: 15px;
+      margin-top: 15px;
+    }
+
+/*VILLA CARLINA FOOTER IMAGE*/
+    .VillaCarlinaPageFooter-image {
+      height: 200px;
+    }
+
+  footer {
+    padding: 20px;
+    text-align: center;
+}
+
+  footer p {
+    font-size: 14px;
+  }
+}
